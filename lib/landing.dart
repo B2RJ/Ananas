@@ -39,7 +39,7 @@ class LandingPage extends StatelessWidget {
                     child: TextButton(
                       onPressed: () => Navigator.push(
                         context,
-                        PageRouteBuilder(
+                        PageRouteBuilder<PageRoute<dynamic>>(
                           transitionDuration: const Duration(seconds: 1),
                           pageBuilder:
                               (context, animation, secondaryAnimation) {
@@ -65,7 +65,7 @@ class LandingPage extends StatelessWidget {
             height: 90,
             alignment: Alignment.center,
             child: const Text(
-              'Built in YYC by Jash Dubal',
+              'Built in YYC by Jash Dubal. Improved by B2RJ.',
               style: TextStyle(
                   fontSize: 12, color: Colors.white24, fontFamily: 'Arial'),
             ),

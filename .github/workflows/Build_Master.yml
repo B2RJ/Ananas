@@ -1,0 +1,47 @@
+name: PR Build Master
+on:
+  push:
+      branches:
+        - main
+jobs:
+  format:
+    name: Format, analyze et test
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: stable
+      - name: Format et Analyze
+        run: |
+          flutter pub get
+          dart format --set-exit-if-changed .
+          flutter analyze
+          flutter test
+  build-iOS:
+    name: Build pour iOS
+    needs: format
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+      - run: flutter pub get
+      - run: flutter build ios --release --no-codesign
+  build-apk:
+    name: Build APK
+    needs: format
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: stable
+      - run: flutter pub get
+      - run: flutter build apk --debug
+      - run: flutter build appbundle

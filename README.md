@@ -22,6 +22,24 @@ flutter run
 flutter test
 ```
 
+## 🪝 Pre-commit
+
+### Installation
+```sh
+TODO
+```
+
+### Usage
+```sh
+TODO
+```
+
+### Update
+To update pre-commit configuration
+```sh
+pre-commit autoupdate
+```
+
 ## 👨🏻‍💻 Author
 
 👤 **Richard BRUNEAU**
@@ -32,7 +50,7 @@ flutter test
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/B2RJ/ananas/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/B2RJ/ananas/issues).
 
 
 ***

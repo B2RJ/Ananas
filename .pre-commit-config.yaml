@@ -1,11 +1,27 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+    rev: v4.4.0
     hooks:
+    -   id: check-json
+    -   id: check-xml
     -   id: check-yaml
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
--   repo: https://github.com/psf/black
-    rev: 22.10.0
+-   repo: https://github.com/fluttercommunity/import_sorter
+    rev: 'f350497a11b1285c695595049e95a420068e7a9f'
     hooks:
-    -   id: black
+      - id: flutter-import-sorter
+        args: [-e]
+-   repo: https://github.com/B2RJ/dart-format-pre-commit
+    rev: "649070c0a895ad14f3dd594a4722b6b6fc03d3c9"
+    hooks:
+      - id: dart-format
+- repo: https://github.com/dluksza/flutter-analyze-pre-commit
+  rev: "4afcaa82fc368d40d486256bf4edba329bf667bb"
+  hooks:
+    - id: flutter-analyze
+      args: [lib/*]
+- repo: https://github.com/dluksza/flutter-test-pre-commit
+  rev: "4a23051c2c808bc2eb693c58fe0e69893168839d"
+  hooks:
+    - id: flutter-test

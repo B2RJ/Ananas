@@ -42,7 +42,7 @@ class Habit extends StatelessWidget {
               child: Column(
                 children: [
                   const Text(
-                    "Work duration",
+                    'Work duration',
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.white70,
@@ -53,6 +53,7 @@ class Habit extends StatelessWidget {
                       height:
                           10), // add a space between the text and the input field
                   TextField(
+                    key: const ValueKey('work_duration'),
                     controller: workController,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
@@ -78,7 +79,7 @@ class Habit extends StatelessWidget {
                   ),
                   const SizedBox(height: 25),
                   const Text(
-                    "Break duration",
+                    'Break duration',
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.white70,
@@ -87,6 +88,7 @@ class Habit extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   TextField(
+                    key: const ValueKey('break_duration'),
                     controller: breakController,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
@@ -114,7 +116,7 @@ class Habit extends StatelessWidget {
                       height:
                           25), // add a space between the text and the input field
                   const Text(
-                    "Sessions",
+                    'Sessions',
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.white70,
@@ -123,6 +125,7 @@ class Habit extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   TextField(
+                    key: const ValueKey('session_count'),
                     controller: sessionController,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
@@ -154,7 +157,7 @@ class Habit extends StatelessWidget {
                   TextButton(
                     onPressed: () => Navigator.push(
                       context,
-                      PageRouteBuilder(
+                      PageRouteBuilder<void>(
                         transitionDuration: const Duration(seconds: 1),
                         pageBuilder: (context, animation, secondaryAnimation) {
                           return FadeTransition(
@@ -179,7 +182,7 @@ class Habit extends StatelessWidget {
                               color: Colors.black12, width: 2.0),
                         )),
                     child: const Text(
-                      "Start",
+                      'Start',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,
