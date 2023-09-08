@@ -13,7 +13,7 @@ repos:
       - id: flutter-import-sorter
         args: [-e]
 -   repo: https://github.com/B2RJ/dart-format-pre-commit
-    rev: "609889b2ffff89d6072cbd67ca5be0f0d3231f42"
+    rev: "649070c0a895ad14f3dd594a4722b6b6fc03d3c9"
     hooks:
       - id: dart-format
 - repo: https://github.com/dluksza/flutter-analyze-pre-commit
