@@ -12,10 +12,14 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hp/main.dart';
 
 void main() {
-  testWidgets('Test B2RJ', (WidgetTester tester) async {
+  testWidgets('Smoke Test', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
 
     expect(find.text('Welcome to Session'), findsOneWidget);
     expect(find.text('start'), findsOneWidget);
+
+    await tester.tap(find.text('start'));
+    await tester.pump();
+    //await tester.tap(find.text('(in minutes)'));
   });
 }
