@@ -53,6 +53,7 @@ class Habit extends StatelessWidget {
                       height:
                           10), // add a space between the text and the input field
                   TextField(
+                    key: const ValueKey('work_duration'),
                     controller: workController,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
@@ -87,6 +88,7 @@ class Habit extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   TextField(
+                    key: const ValueKey('break_duration'),
                     controller: breakController,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
@@ -123,6 +125,7 @@ class Habit extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   TextField(
+                    key: const ValueKey('session_count'),
                     controller: sessionController,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
