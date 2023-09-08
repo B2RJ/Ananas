@@ -1,5 +1,9 @@
 name: PR Build check
-on: pull_request
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
 jobs:
   format:
     name: Format, analyze et test
