@@ -68,5 +68,14 @@ void main() {
     await tester.pageBack();
     await tester.pumpAndSettle();
     expect(find.byType(TextField), findsNWidgets(3));
+
+    // Simulate pressing the data button in the left of the app bar.
+    await tester.tap(find.byIcon(Icons.timelapse_rounded));
+    await tester.pumpAndSettle();
+    expect(find.text('Data'), findsOneWidget);
+    expect(find.text("total minutes"), findsOneWidget);
+    expect(find.text("longest session"), findsOneWidget);
+    expect(find.text("number of sessions"), findsOneWidget);
+    expect(find.text("avg session time"), findsOneWidget);
   });
 }
