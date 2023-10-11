@@ -16,6 +16,7 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: stable
+          architecture: x64
       - name: Format et Analyze
         run: |
           flutter pub get
@@ -43,6 +44,7 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: stable
+          architecture: x64
       - run: flutter pub get
       - run: flutter build apk --debug
       - run: flutter build appbundle
