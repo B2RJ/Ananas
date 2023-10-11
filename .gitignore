@@ -25,3 +25,9 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+macos/Podfile.lock
+macos/Flutter/ephemeral/*
+macos/Pods/Pods.xcodeproj/*
+macos/Pods/Target Support Files/*
+macos/Runner.xcodeproj/*
+macos/Runner.xcworkspace/*
