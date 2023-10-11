@@ -73,9 +73,9 @@ void main() {
     await tester.tap(find.byIcon(Icons.timelapse_rounded));
     await tester.pumpAndSettle();
     expect(find.text('Data'), findsOneWidget);
-    expect(find.text("total minutes"), findsOneWidget);
-    expect(find.text("longest session"), findsOneWidget);
-    expect(find.text("number of sessions"), findsOneWidget);
-    expect(find.text("avg session time"), findsOneWidget);
+    expect(find.text('total minutes'), findsOneWidget);
+    expect(find.text('longest session'), findsOneWidget);
+    expect(find.text('number of sessions'), findsOneWidget);
+    expect(find.text('avg session time'), findsOneWidget);
   });
 }

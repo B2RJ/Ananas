@@ -87,7 +87,7 @@ class _TimerState extends State<MyTimer> {
                         width:
                             50), // Add some horizontal spacing to align the text with the first message
                     Text(
-                      "Please enter valid numbers to start.",
+                      'Please enter valid numbers to start.',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 14,
@@ -115,7 +115,7 @@ class _TimerState extends State<MyTimer> {
     curr = _prefs?.getString('time');
     var now = DateTime.now();
     DateTime date = DateTime(now.year, now.month, now.day);
-    String formattedDate = "${date.day}-${date.month}-${date.year}";
+    String formattedDate = '${date.day}-${date.month}-${date.year}';
     await _prefs!.setString(
         'time', '$curr / ${_sessionCount * _timeInt} $formattedDate');
   }
@@ -223,7 +223,7 @@ class _TimerState extends State<MyTimer> {
   Widget build(BuildContext context) {
     final int minutes = _time.inMinutes;
     final int seconds = _time.inSeconds % 60;
-    String timerState = "Break";
+    String timerState = 'Break';
     if (_timerCount % 2 == 0) {
       timerState = '$_counter / $_sessionCount';
     }
