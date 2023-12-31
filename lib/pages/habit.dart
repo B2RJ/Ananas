@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
+import 'package:hp/app_color.dart';
 import 'package:hp/pages/timer.dart';
 
 class Habit extends StatelessWidget {
@@ -9,7 +10,7 @@ class Habit extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color col = Colors.greenAccent;
+    Color col = AppColors.primaryColor;
     final TextEditingController workController = TextEditingController();
     final TextEditingController breakController = TextEditingController();
     final TextEditingController sessionController = TextEditingController();
@@ -18,11 +19,11 @@ class Habit extends StatelessWidget {
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         child: Scaffold(
             resizeToAvoidBottomInset: false,
-            backgroundColor: Colors.black,
+            backgroundColor: AppColors.backgroundColor,
             appBar: AppBar(
                 automaticallyImplyLeading: false,
                 centerTitle: false,
-                backgroundColor: Colors.black,
+                backgroundColor: AppColors.backgroundColor,
                 title: Text.rich(
                   TextSpan(
                     text: 'Start session', // text for title
@@ -185,7 +186,7 @@ class Habit extends StatelessWidget {
                       'Start',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Colors.black,
+                        color: AppColors.backgroundColor,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Arial',
                       ),

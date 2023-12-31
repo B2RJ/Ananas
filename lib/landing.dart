@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
+import 'package:hp/app_color.dart';
 import 'homepage.dart';
 
 class LandingPage extends StatelessWidget {
@@ -12,7 +13,7 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.backgroundColor,
       body: Column(
         children: [
           // The main content of the page
@@ -52,7 +53,7 @@ class LandingPage extends StatelessWidget {
                       ),
                       child: const Text(
                         'start',
-                        style: TextStyle(color: Colors.greenAccent),
+                        style: TextStyle(color: AppColors.primaryColor),
                       ),
                     ),
                   ),

@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:shared_preferences/shared_preferences.dart';
 
+// 🌎 Project imports:
+import 'package:hp/app_color.dart';
+
 class Data extends StatefulWidget {
   const Data({Key? key}) : super(key: key);
 
@@ -56,18 +59,18 @@ class _DataState extends State<Data> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: AppColors.backgroundColor,
         // padding: const EdgeInsets.all(20.0),
         appBar: AppBar(
             automaticallyImplyLeading: false,
             centerTitle: false,
-            backgroundColor: Colors.black,
+            backgroundColor: AppColors.backgroundColor,
             title: const Text.rich(
               TextSpan(
                 text: 'Data', // text for title
                 style: TextStyle(
                   fontSize: 24,
-                  color: Colors.greenAccent,
+                  color: AppColors.primaryColor,
                   fontFamily: 'Arial',
                 ),
               ),
@@ -95,8 +98,8 @@ class _DataState extends State<Data> {
                             borderRadius: BorderRadius.circular(25.0),
                           ),
                           clipBehavior: Clip.antiAlias,
-                          color: Colors.black,
-                          shadowColor: Colors.greenAccent,
+                          color: AppColors.backgroundColor,
+                          shadowColor: AppColors.primaryColor,
                           elevation: 15,
                           child: Padding(
                             padding: const EdgeInsets.all(26.0),
@@ -104,18 +107,18 @@ class _DataState extends State<Data> {
                               children: [
                                 const Icon(
                                   Icons.access_time_filled_outlined,
-                                  color: Colors.greenAccent,
+                                  color: AppColors.primaryColor,
                                   size: 50,
                                 ),
                                 Text(_totalMin.toString(),
                                     style: const TextStyle(
-                                        color: Colors.greenAccent,
+                                        color: AppColors.primaryColor,
                                         fontSize: 24,
                                         fontWeight: FontWeight.bold,
                                         fontFamily: 'Arial')),
                                 const Text('total minutes',
                                     style: TextStyle(
-                                        color: Colors.greenAccent,
+                                        color: AppColors.primaryColor,
                                         fontSize: 12,
                                         fontFamily: 'Arial',
                                         fontStyle: FontStyle.italic)),
@@ -128,8 +131,8 @@ class _DataState extends State<Data> {
                             borderRadius: BorderRadius.circular(25.0),
                           ),
                           clipBehavior: Clip.antiAlias,
-                          color: Colors.black,
-                          shadowColor: Colors.greenAccent,
+                          color: AppColors.backgroundColor,
+                          shadowColor: AppColors.primaryColor,
                           elevation: 15,
                           child: Padding(
                             padding: const EdgeInsets.all(26.0),
@@ -137,18 +140,18 @@ class _DataState extends State<Data> {
                               children: [
                                 const Icon(
                                   Icons.emoji_events,
-                                  color: Colors.greenAccent,
+                                  color: AppColors.primaryColor,
                                   size: 50,
                                 ),
                                 Text(_longestSesh.toString(),
                                     style: const TextStyle(
-                                        color: Colors.greenAccent,
+                                        color: AppColors.primaryColor,
                                         fontSize: 24,
                                         fontWeight: FontWeight.bold,
                                         fontFamily: 'Arial')),
                                 const Text('longest session',
                                     style: TextStyle(
-                                        color: Colors.greenAccent,
+                                        color: AppColors.primaryColor,
                                         fontSize: 12,
                                         fontFamily: 'Arial',
                                         fontStyle: FontStyle.italic)),
@@ -161,8 +164,8 @@ class _DataState extends State<Data> {
                             borderRadius: BorderRadius.circular(25.0),
                           ),
                           clipBehavior: Clip.antiAlias,
-                          color: Colors.black,
-                          shadowColor: Colors.greenAccent,
+                          color: AppColors.backgroundColor,
+                          shadowColor: AppColors.primaryColor,
                           elevation: 15,
                           child: Padding(
                             padding: const EdgeInsets.all(26.0),
@@ -170,18 +173,18 @@ class _DataState extends State<Data> {
                               children: [
                                 const Icon(
                                   Icons.calendar_month_rounded,
-                                  color: Colors.greenAccent,
+                                  color: AppColors.primaryColor,
                                   size: 50,
                                 ),
                                 Text(_seshNum.toString(),
                                     style: const TextStyle(
-                                        color: Colors.greenAccent,
+                                        color: AppColors.primaryColor,
                                         fontSize: 24,
                                         fontWeight: FontWeight.bold,
                                         fontFamily: 'Arial')),
                                 const Text('number of sessions',
                                     style: TextStyle(
-                                        color: Colors.greenAccent,
+                                        color: AppColors.primaryColor,
                                         fontSize: 12,
                                         fontFamily: 'Arial',
                                         fontStyle: FontStyle.italic)),
@@ -194,8 +197,8 @@ class _DataState extends State<Data> {
                             borderRadius: BorderRadius.circular(25.0),
                           ),
                           clipBehavior: Clip.antiAlias,
-                          color: Colors.black,
-                          shadowColor: Colors.greenAccent,
+                          color: AppColors.backgroundColor,
+                          shadowColor: AppColors.primaryColor,
                           elevation: 15,
                           child: Padding(
                             padding: const EdgeInsets.all(26.0),
@@ -203,20 +206,20 @@ class _DataState extends State<Data> {
                               children: [
                                 const Icon(
                                   Icons.bar_chart_rounded,
-                                  color: Colors.greenAccent,
+                                  color: AppColors.primaryColor,
                                   size: 50,
                                 ),
                                 Text(
                                     double.parse((_avgSesh).toStringAsFixed(2))
                                         .toString(),
                                     style: const TextStyle(
-                                        color: Colors.greenAccent,
+                                        color: AppColors.primaryColor,
                                         fontSize: 24,
                                         fontWeight: FontWeight.bold,
                                         fontFamily: 'Arial')),
                                 const Text('avg session time',
                                     style: TextStyle(
-                                        color: Colors.greenAccent,
+                                        color: AppColors.primaryColor,
                                         fontSize: 12,
                                         fontFamily: 'Arial',
                                         fontStyle: FontStyle.italic)),
