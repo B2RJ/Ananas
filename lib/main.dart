@@ -5,15 +5,20 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
+import 'package:firebase_core/firebase_core.dart';
 import 'package:window_manager/window_manager.dart';
 
 // 🌎 Project imports:
 import 'package:hp/landing.dart';
+import 'firebase_options.dart';
 
-// Import the package required to fix window size window management
-
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 
   if (Platform.isMacOS) {
