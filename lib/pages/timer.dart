@@ -8,6 +8,9 @@ import 'package:flutter/material.dart';
 import 'package:animated_snack_bar/animated_snack_bar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+// 🌎 Project imports:
+import 'package:hp/app_color.dart';
+
 class MyTimer extends StatefulWidget {
   final String breakTime;
   final String workTime;
@@ -73,7 +76,7 @@ class _TimerState extends State<MyTimer> {
                     Text(
                       'Invalid input!',
                       style: TextStyle(
-                        color: Colors.black,
+                        color: AppColors.backgroundColor,
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
                         fontFamily: 'Arial',
@@ -89,7 +92,7 @@ class _TimerState extends State<MyTimer> {
                     Text(
                       'Please enter valid numbers to start.',
                       style: TextStyle(
-                        color: Colors.black,
+                        color: AppColors.backgroundColor,
                         fontSize: 14,
                         fontFamily: 'Arial',
                       ),
@@ -146,7 +149,7 @@ class _TimerState extends State<MyTimer> {
               builder: ((context) {
                 return Container(
                   padding: const EdgeInsets.all(8),
-                  color: Colors.greenAccent,
+                  color: AppColors.primaryColor,
                   height: 65,
                   child: Column(
                     children: [
@@ -160,7 +163,7 @@ class _TimerState extends State<MyTimer> {
                           Text(
                             'Session Completed!',
                             style: TextStyle(
-                              color: Colors.black,
+                              color: AppColors.backgroundColor,
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
                               fontFamily: 'Arial',
@@ -176,7 +179,7 @@ class _TimerState extends State<MyTimer> {
                           Text(
                             'You logged ${_sessionCount * _timeInt} minutes.',
                             style: const TextStyle(
-                              color: Colors.black,
+                              color: AppColors.backgroundColor,
                               fontSize: 14,
                               fontFamily: 'Arial',
                             ),
@@ -228,16 +231,16 @@ class _TimerState extends State<MyTimer> {
       timerState = '$_counter / $_sessionCount';
     }
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
         centerTitle: false,
-        backgroundColor: Colors.black,
+        backgroundColor: AppColors.backgroundColor,
         title: const Text.rich(
           TextSpan(
             text: 'Session', // text for title
             style: TextStyle(
               fontSize: 24,
-              color: Colors.greenAccent,
+              color: AppColors.primaryColor,
               fontFamily: 'Arial',
             ),
           ),
@@ -248,7 +251,7 @@ class _TimerState extends State<MyTimer> {
           IconButton(
             padding: const EdgeInsets.only(right: 20.0),
             icon: const Icon(Icons.restart_alt,
-                color: Colors.greenAccent, size: 30),
+                color: AppColors.primaryColor, size: 30),
             onPressed: () {
               setState(() {
                 _resetTimer();
@@ -267,8 +270,8 @@ class _TimerState extends State<MyTimer> {
                   width: 300,
                   height: 300,
                   child: CircularProgressIndicator(
-                    color: Colors.greenAccent,
-                    backgroundColor: Colors.black,
+                    color: AppColors.primaryColor,
+                    backgroundColor: AppColors.backgroundColor,
                     value: _time.inSeconds /
                         (_currMax *
                             60), // calculates the progress as a value between 0 and 1
@@ -282,7 +285,7 @@ class _TimerState extends State<MyTimer> {
                     '${minutes.toString().padLeft(2, '0')}:${seconds.toString().padLeft(2, '0')}',
                     style: const TextStyle(
                       fontSize: 60,
-                      color: Colors.greenAccent,
+                      color: AppColors.primaryColor,
                       fontFamily: 'Arial',
                     ),
                   ),
@@ -294,7 +297,7 @@ class _TimerState extends State<MyTimer> {
                     timerState,
                     style: const TextStyle(
                       fontSize: 20,
-                      color: Colors.greenAccent,
+                      color: AppColors.primaryColor,
                       fontFamily: 'Arial',
                     ),
                   ),
@@ -316,11 +319,11 @@ class _TimerState extends State<MyTimer> {
           });
         },
         shape: const CircleBorder(),
-        backgroundColor: Colors.black,
+        backgroundColor: AppColors.backgroundColor,
         mini: false,
         child: _isRunning
-            ? const Icon(Icons.pause, color: Colors.greenAccent)
-            : const Icon(Icons.play_arrow, color: Colors.greenAccent),
+            ? const Icon(Icons.pause, color: AppColors.primaryColor)
+            : const Icon(Icons.play_arrow, color: AppColors.primaryColor),
       ),
     );
   }

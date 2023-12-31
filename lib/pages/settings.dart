@@ -7,6 +7,9 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:shared_preferences/shared_preferences.dart';
 
+// 🌎 Project imports:
+import 'package:hp/app_color.dart';
+
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
 
@@ -54,20 +57,20 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.backgroundColor,
       body: SingleChildScrollView(
         child: Column(
           children: [
             AppBar(
               automaticallyImplyLeading: false,
               centerTitle: false,
-              backgroundColor: Colors.black,
+              backgroundColor: AppColors.backgroundColor,
               title: const Text.rich(
                 TextSpan(
                   text: 'History', // text for title
                   style: TextStyle(
                     fontSize: 24,
-                    color: Colors.greenAccent,
+                    color: AppColors.primaryColor,
                     fontFamily: 'Arial',
                   ),
                 ),
@@ -76,24 +79,24 @@ class _SettingsState extends State<Settings> {
                 IconButton(
                   padding: const EdgeInsets.only(right: 10.0),
                   icon: const Icon(Icons.delete_outline,
-                      color: Colors.greenAccent, size: 30),
+                      color: AppColors.primaryColor, size: 30),
                   onPressed: () async {
                     bool? delete = await showDialog<bool>(
                       context: context,
                       builder: (context) {
                         return AlertDialog(
-                          backgroundColor: Colors.black,
+                          backgroundColor: AppColors.backgroundColor,
                           titleTextStyle: const TextStyle(
-                              color: Colors.greenAccent, fontSize: 24),
+                              color: AppColors.primaryColor, fontSize: 24),
                           shape: RoundedRectangleBorder(
                             side: const BorderSide(
-                                color: Colors.greenAccent, width: 2),
+                                color: AppColors.primaryColor, width: 2),
                             borderRadius: BorderRadius.circular(15.0),
                           ),
                           title: const Text(
                             'Delete History',
                             style: TextStyle(
-                              color: Colors.greenAccent,
+                              color: AppColors.primaryColor,
                               fontSize: 20,
                               fontFamily: 'Arial',
                             ),
@@ -101,7 +104,7 @@ class _SettingsState extends State<Settings> {
                           content: const Text(
                               'Are you sure you want to delete your ENTIRE session history?',
                               style: TextStyle(
-                                color: Colors.greenAccent,
+                                color: AppColors.primaryColor,
                                 fontSize: 16,
                                 fontFamily: 'Arial',
                               )),
@@ -109,7 +112,7 @@ class _SettingsState extends State<Settings> {
                             TextButton(
                               child: const Text('Yes',
                                   style: TextStyle(
-                                    color: Colors.greenAccent,
+                                    color: AppColors.primaryColor,
                                     fontSize: 13,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: 'Arial',
@@ -120,7 +123,7 @@ class _SettingsState extends State<Settings> {
                               child: const Text(
                                 'No',
                                 style: TextStyle(
-                                  color: Colors.greenAccent,
+                                  color: AppColors.primaryColor,
                                   fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Arial',
@@ -178,14 +181,14 @@ class _SettingsState extends State<Settings> {
                               height: 65.0,
                               child: Card(
                                 elevation: 15,
-                                shadowColor: Colors.greenAccent,
+                                shadowColor: AppColors.primaryColor,
                                 clipBehavior: Clip.antiAlias,
                                 shape: RoundedRectangleBorder(
                                   side: const BorderSide(
-                                      color: Colors.greenAccent, width: 1),
+                                      color: AppColors.primaryColor, width: 1),
                                   borderRadius: BorderRadius.circular(25.0),
                                 ),
-                                color: Colors.black,
+                                color: AppColors.backgroundColor,
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: <Widget>[
@@ -199,7 +202,7 @@ class _SettingsState extends State<Settings> {
                                           Text(
                                             _dates[_dates.length - 1 - index],
                                             style: const TextStyle(
-                                              color: Colors.greenAccent,
+                                              color: AppColors.primaryColor,
                                               fontSize: 20,
                                               fontFamily: 'Arial',
                                             ),
@@ -218,7 +221,7 @@ class _SettingsState extends State<Settings> {
                                           Text(
                                             _sesh[_sesh.length - 1 - index],
                                             style: const TextStyle(
-                                              color: Colors.greenAccent,
+                                              color: AppColors.primaryColor,
                                               fontSize: 20,
                                               fontFamily: 'Arial',
                                             ),

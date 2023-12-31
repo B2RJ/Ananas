@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 // 🌎 Project imports:
+import 'package:hp/app_color.dart';
 import 'package:hp/pages/data.dart';
 import 'package:hp/pages/habit.dart';
 import 'package:hp/pages/settings.dart';
@@ -22,13 +23,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.backgroundColor,
       bottomNavigationBar: CurvedNavigationBar(
         height: 75,
         animationCurve: Curves.easeInOut,
-        backgroundColor: Colors.black,
-        buttonBackgroundColor: Colors.greenAccent,
-        color: Colors.greenAccent,
+        backgroundColor: AppColors.backgroundColor,
+        buttonBackgroundColor: AppColors.primaryColor,
+        color: AppColors.primaryColor,
         animationDuration: const Duration(milliseconds: 350),
         onTap: (selectedIndex) {
           setState(() {
@@ -37,9 +38,12 @@ class _HomePageState extends State<HomePage> {
         },
         index: 1,
         items: const [
-          Icon(Icons.timelapse_rounded, size: 20, color: Colors.black),
-          Icon(Icons.fitbit_rounded, size: 20, color: Colors.black),
-          Icon(Icons.history_rounded, size: 20, color: Colors.black),
+          Icon(Icons.timelapse_rounded,
+              size: 20, color: AppColors.backgroundColor),
+          Icon(Icons.fitbit_rounded,
+              size: 20, color: AppColors.backgroundColor),
+          Icon(Icons.history_rounded,
+              size: 20, color: AppColors.backgroundColor),
         ],
       ),
       body: Container(
