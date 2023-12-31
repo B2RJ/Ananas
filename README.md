@@ -26,12 +26,12 @@ flutter test
 
 ### Installation
 ```sh
-TODO
+brew install pre-commit
 ```
 
 ### Usage
 ```sh
-TODO
+pre-commit
 ```
 
 ### Update
