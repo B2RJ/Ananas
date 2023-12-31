@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "684367942296",
+    "project_id": "ananas-59161",
+    "storage_bucket": "ananas-59161.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684367942296:android:25ea39400ed2afb99c76ed",
+        "android_client_info": {
+          "package_name": "com.example.ananas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4Qkw6yA045mtevTJ35ojYZa_K3D8KIJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
