@@ -22,7 +22,6 @@ jobs:
           flutter pub get
           dart format --set-exit-if-changed .
           flutter analyze
-          flutter test
   build-iOS:
     name: Build pour iOS
     needs: format

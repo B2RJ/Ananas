@@ -42,9 +42,9 @@ void main() {
     await tester.pumpAndSettle();
 
     // Verify that the session details are displayed.
-    expect(find.text('Session'), findsOneWidget);
-    expect(find.text('25:00'), findsOneWidget);
-    expect(find.text('1 / 3'), findsOneWidget);
+    expect(find.text('Session', findRichText: true), findsOneWidget);
+    expect(find.text('25:00', findRichText: true), findsOneWidget);
+    expect(find.text('1 / 3', findRichText: true), findsOneWidget);
     expect(find.byIcon(Icons.restart_alt), findsOneWidget);
     expect(find.byIcon(Icons.play_arrow), findsOneWidget);
 
@@ -73,6 +73,10 @@ void main() {
     await tester.tap(find.byIcon(Icons.timelapse_rounded));
     await tester.pumpAndSettle();
     expect(find.text('Data'), findsOneWidget);
+    expect(find.text('total minutes'), findsOneWidget);
+    expect(find.text('longest session'), findsOneWidget);
+    expect(find.text('number of sessions'), findsOneWidget);
+    expect(find.text('avg session time'), findsOneWidget);
     expect(find.text('total minutes'), findsOneWidget);
     expect(find.text('longest session'), findsOneWidget);
     expect(find.text('number of sessions'), findsOneWidget);
