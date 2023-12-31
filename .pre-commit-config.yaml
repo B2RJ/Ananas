@@ -21,6 +21,7 @@ repos:
   hooks:
     - id: flutter-analyze
       args: [lib/*]
+      exclude: lib/firebase_options.dart
 - repo: https://github.com/dluksza/flutter-test-pre-commit
   rev: "4a23051c2c808bc2eb693c58fe0e69893168839d"
   hooks:

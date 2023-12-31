@@ -30,6 +30,8 @@ analyzer:
     strict-casts: true
     strict-inference: true
     strict-raw-types: true
+  exclude:
+    - 'lib/firebase_options.dart'
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
