@@ -39,7 +39,7 @@ class LandingPage extends StatelessWidget {
                     child: TextButton(
                       onPressed: () => Navigator.push(
                         context,
-                        PageRouteBuilder(
+                        PageRouteBuilder<PageRoute<dynamic>>(
                           transitionDuration: const Duration(seconds: 1),
                           pageBuilder:
                               (context, animation, secondaryAnimation) {
